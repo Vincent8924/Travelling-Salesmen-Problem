@@ -50,8 +50,8 @@ class Benchmark:
 
     def run_all(
         self,
-        dataset_folder="datasets",
-        runs=1
+        dataset_folder,
+        runs
     ):
         dataset_folder = Path(dataset_folder)
         for dataset_file in sorted(dataset_folder.glob("*.tsp")):
