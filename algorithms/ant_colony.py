@@ -28,10 +28,7 @@ def calculate_visibility_matrix(distance_matrix):
             if i == j:
                 row.append(0)
             else:
-                dist = distance_matrix[i][j]
-                if dist == 0:
-                    dist = 0.0001
-                row.append(1 / dist)
+                row.append(1 / distance_matrix[i][j])
         visibility_matrix.append(row)
         if i != j and distance_matrix[i][j] == 0:
             print(f"Zero distance: {i} -> {j}")
@@ -153,8 +150,7 @@ def deposit_pheromone(
     q=100
 ):
     for ant in colony:
-        safe_length = ant.length if ant.length > 0 else 0.0001
-        contribution = q / safe_length
+        contribution = q / ant.length
         number_of_cities = len(ant.tour)
         for i in range(number_of_cities):
             city1 = ant.tour[i]
