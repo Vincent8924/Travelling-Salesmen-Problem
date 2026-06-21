@@ -53,6 +53,11 @@ def calculate_transition_probabilities(
         )
         probabilities[city] = value
         total += value
+    if total == 0:
+        equal_prob = 1.0 / len(unvisited)
+        for city in unvisited:
+            probabilities[city] = equal_prob
+        return probabilities
     # Normalize
     for city in probabilities:
         probabilities[city] /= total

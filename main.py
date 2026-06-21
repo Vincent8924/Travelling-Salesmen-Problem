@@ -1,7 +1,5 @@
 import json
 from utils.benchmark import Benchmark
-import random
-random.seed(42)
 
 def load_config(config_file="config.json"):
     try:
