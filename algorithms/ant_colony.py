@@ -28,7 +28,10 @@ def calculate_visibility_matrix(distance_matrix):
             if i == j:
                 row.append(0)
             else:
-                row.append(1 / distance_matrix[i][j])
+                dist = distance_matrix[i][j]
+                if dist == 0:
+                    dist = 0.0001
+                row.append(1 / dist)
         visibility_matrix.append(row)
         if i != j and distance_matrix[i][j] == 0:
             print(f"Zero distance: {i} -> {j}")
@@ -53,11 +56,6 @@ def calculate_transition_probabilities(
         )
         probabilities[city] = value
         total += value
-    if total == 0:
-        equal_prob = 1.0 / len(unvisited)
-        for city in unvisited:
-            probabilities[city] = equal_prob
-        return probabilities
     # Normalize
     for city in probabilities:
         probabilities[city] /= total
@@ -155,7 +153,8 @@ def deposit_pheromone(
     q=100
 ):
     for ant in colony:
-        contribution = q / ant.length
+        safe_length = ant.length if ant.length > 0 else 0.0001
+        contribution = q / safe_length
         number_of_cities = len(ant.tour)
         for i in range(number_of_cities):
             city1 = ant.tour[i]
