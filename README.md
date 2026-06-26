@@ -24,7 +24,7 @@ This project was developed as part of the TDA6323 Algorithm Design and Analysis 
     - genetic_algorithm.py  # Genetic Algorithm implementation
     - local_search.py       # 2-Opt Local Search implementation
 - datasets/                 # TSPLIB benchmark datasets (.tsp format)
-    -results/                  # Generated benchmark results and statistics (CSV/XLSX)
+    - results/                  # Generated benchmark results and statistics (CSV/XLSX)
 - utils/
     - benchmark.py          # Benchmarking utilities and metrics
     - distance.py           # Euclidean distance matrix calculations
