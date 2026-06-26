@@ -5,10 +5,10 @@ This project implements and evaluates various metaheuristic and local search alg
 
 This project was developed as part of the TDA6323 Algorithm Design and Analysis course at Multimedia University (MMU).
 
-## Authors (Group 2, Section A1A)
-* **Vincent Tay Yong Jun** (243UT246WY)
-* **Koh Chen Yap** (241UT24101)
-* **Lew Zixin** (243UT246WZ)
+## Authors
+* **Vincent Tay Yong Jun**
+* **Koh Chen Yap**
+* **Lew Zixin**
 
 ## Features
 * **Algorithms Implemented:**
@@ -19,20 +19,20 @@ This project was developed as part of the TDA6323 Algorithm Design and Analysis 
 * **Benchmarking:** Built-in automated scripts evaluate execution time and tour length quality, exporting raw data and summary statistics to CSV and Excel files.
 
 ## Project Structure
-├── algorithms/
-│   ├── ant_colony.py         # Ant Colony Optimization implementation
-│   ├── genetic_algorithm.py  # Genetic Algorithm implementation
-│   └── local_search.py       # 2-Opt Local Search implementation
-├── datasets/                 # TSPLIB benchmark datasets (.tsp format)
-├── results/                  # Generated benchmark results and statistics (CSV/XLSX)
-├── utils/
-│   ├── benchmark.py          # Benchmarking utilities and metrics
-│   ├── distance.py           # Euclidean distance matrix calculations
-│   ├── tour_utils.py         # Tour length calculation and utility logic
-│   └── tsplib_parser.py      # Parser for extracting node coordinates from .tsp files
-├── config.json               # Hyperparameters and algorithm configuration
-├── main.py                   # Main entry point to run algorithms and benchmarks
-└── README.md                 # Project documentation
+- algorithms/
+    - ant_colony.py         # Ant Colony Optimization implementation
+    - genetic_algorithm.py  # Genetic Algorithm implementation
+    - local_search.py       # 2-Opt Local Search implementation
+- datasets/                 # TSPLIB benchmark datasets (.tsp format)
+    -results/                  # Generated benchmark results and statistics (CSV/XLSX)
+- utils/
+    - benchmark.py          # Benchmarking utilities and metrics
+    - distance.py           # Euclidean distance matrix calculations
+    - tour_utils.py         # Tour length calculation and utility logic
+    - tsplib_parser.py      # Parser for extracting node coordinates from .tsp files
+- config.json               # Hyperparameters and algorithm configuration
+- main.py                   # Main entry point to run algorithms and benchmarks
+- README.md                 # Project documentation
 
 ## Getting Started
 
